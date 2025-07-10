@@ -80,7 +80,7 @@ section.banner {
   font-weight: bold;
   color: white;
   cursor: pointer;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 .banner button:hover {
@@ -143,7 +143,7 @@ th {
 }
 
 form input, form textarea {
-  width: 100%;
+  width: 50%;
   padding: 8px;
   border: none;
   margin-bottom: 10px;
