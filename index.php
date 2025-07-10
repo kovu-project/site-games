@@ -1,12 +1,13 @@
 <?php
+session_start();
 require_once 'includes/header.php';
 require_once 'includes/menu.php';
 ?>
 
 <main>
-  <!-- Banner destaque -->
-  <section class="banner">
-    <h2>LANÇAMENTO: Nome do Jogo</h2>
+  <!-- Banner destaque com imagem de fundo -->
+  <section class="banner" style="background-image: url('imagens/banner.jpg');">
+    <h2>LANÇAMENTO: Elden Ring</h2>
     <button>Ver mais</button>
   </section>
 
@@ -14,10 +15,15 @@ require_once 'includes/menu.php';
   <section class="destaques">
     <h3>Jogos Mais Vendidos</h3>
     <div class="jogos-lista">
-      <!-- Simulação de jogos -->
-      <div class="jogo">[Imagem Jogo 1]</div>
-      <div class="jogo">[Imagem Jogo 2]</div>
-      <div class="jogo">[Imagem Jogo 3]</div>
+      <div class="jogo">
+        <img src="imagens/elden-ring.jpg" alt="Elden Ring">
+      </div>
+      <div class="jogo">
+        <img src="imagens/hades.jpg" alt="Hades">
+      </div>
+      <div class="jogo">
+        <img src="imagens/god-of-war.jpg" alt="God of War">
+      </div>
     </div>
   </section>
 
@@ -32,18 +38,21 @@ require_once 'includes/menu.php';
   <!-- Recomendado -->
   <section class="recomendado">
     <h3>Recomendado para Você</h3>
-    <ul>
-      <li>[Jogo recomendado]</li>
-    </ul>
+    <div class="jogos-lista">
+      <div class="jogo">
+        <img src="imagens/hollow-knight.jpg" alt="Hollow Knight">
+      </div>
+    </div>
   </section>
 
   <!-- Comunidade -->
   <section class="comunidade">
     <h3>Novidades da Comunidade</h3>
-    <div>[Entrada 1]</div>
-    <div>[Entrada 2]</div>
+    <div style="color: #aaa;">• Hollow Knight está em promoção!</div>
+    <div style="color: #aaa;">• God of War agora com DLC gratuito</div>
   </section>
 </main>
+
 
 <?php
 require_once 'includes/footer.php';

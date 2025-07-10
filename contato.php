@@ -1,8 +1,25 @@
 <?php
+session_start();
 require_once 'includes/header.php';
 require_once 'includes/menu.php';
-?>
+require_once 'includes/conexao.php';
 
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+  $nome = $_POST['nome'];
+  $telefone = $_POST['telefone'];
+  $email = $_POST['email'];
+  $mensagem = $_POST['mensagem'];
+
+  $sql = "INSERT INTO mensagens (nome, telefone, email, mensagem)
+          VALUES ('$nome', '$telefone', '$email', '$mensagem')";
+
+  if ($conn->query($sql) === TRUE) {
+    echo "<p style='color:green; text-align:center;'>Mensagem enviada com sucesso!</p>";
+  } else {
+    echo "<p style='color:red; text-align:center;'>Erro ao enviar: " . $conn->error . "</p>";
+  }
+}
+?>
 <main>
   <h2>Fale Conosco</h2>
   <form action="#" method="post">

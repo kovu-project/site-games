@@ -1,8 +1,16 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
-  background-color: #1b1b1b;
-  color: #fff;
+  background-color: #1a1a1a;
+  color: #eaeaea;
+  line-height: 1.6;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-top: 80px;
 }
 
 header {
@@ -11,34 +19,167 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
 }
 
 nav ul {
   list-style: none;
   display: flex;
   gap: 15px;
+  padding: 0;
+  margin: 0;
 }
 
 nav a {
   color: #fff;
   text-decoration: none;
+  padding: 8px 12px;
+  transition: background 0.2s ease;
 }
 
-main {
-  padding: 20px;
+nav a:hover {
+  background-color: #333;
+  border-radius: 4px;
 }
 
 section {
+  margin-bottom: 50px;
+}
+section.banner {
+  background-color: #333;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+}
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 80px 20px;
+  text-align: center;
+  border-radius: 12px;
   margin-bottom: 40px;
+  color: white;
+  box-shadow: 0 0 20px #0007;
+}
+
+.banner h2 {
+  font-size: 32px;
+  text-shadow: 1px 1px 5px #000;
+}
+
+.banner button {
+  padding: 12px 24px;
+  background-color: #0a84ff;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.banner button:hover {
+  background-color: #0066cc;
 }
 
 .jogos-lista {
   display: flex;
-  gap: 15px;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .jogo {
+  background: #292929;
+  width: 160px;
+  height: 160px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: #bbb;
+  box-shadow: 0 0 10px #0005;
+  transition: transform 0.2s ease;
+}
+
+.jogo img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #0006;
+  transition: transform 0.2s ease;
+}
+
+.jogo img:hover {
+  transform: scale(1.05);
+}
+
+.jogo:hover {
+  transform: scale(1.05);
   background: #333;
-  width: 100px;
-  height: 100px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #2b2b2b;
+}
+
+th, td {
+  border: 1px solid #444;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #222;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+form button {
+  padding: 10px 20px;
+  background-color: #0a84ff;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+form button:hover {
+  background-color: #005ecb;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .jogos-lista {
+    flex-direction: column;
+  }
+
+  .jogo {
+    width: 100%;
+    height: 100px;
+  }
 }
